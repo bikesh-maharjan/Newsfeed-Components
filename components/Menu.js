@@ -31,14 +31,32 @@ let menuItems = [
 
   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 */
+// Step : 1 function menu is create here
 
 function menuMaker(arr) {
-  const div = document.createElement("div");
-  divMenu.classList.add("menu");
-  const unOrderList = document.createElement("ul");
+  const div = document.createElement("div"); //creating a variable
+  div.classList.add("menu"); // adding menu here
+  // console.log(div);
+  const ul = document.createElement("ul"); // creating a unorderlist variable
+
+  // Step: 2 looping each items on the list
   arr.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
-    unOrderList.appendChild(li);
+    ul.appendChild(li); // here appending from li
+    div.appendChild(ul); // here appending from ul
   });
+  // Step: 3 selecting from DOM
+  const menuButton = document.querySelector(".menu-button");
+  // Step: 4 adding eventlistener here for to toggle when you click on hamburger menu
+  menuButton.addEventListener("click", () =>
+    div.classList.toggle("menu--open")
+  );
+  // Step 5 --- returning the div
+  return div;
 }
+
+// Step 6: given menu-items here we are appending to the child menuMaker
+
+const menuDropdown = document.querySelector(".header"); // this is for the menu dropdown
+menuDropdown.appendChild(menuMaker(menuItems));

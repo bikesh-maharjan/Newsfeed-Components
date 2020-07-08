@@ -139,7 +139,7 @@ function articleMaker(articleArr) {
   const articleParagraph3 = document.createElement("p");
   const articleExpandButton = document.createElement("span");
 
-  console.log(article);
+  // console.log(article);
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
@@ -160,7 +160,7 @@ function articleMaker(articleArr) {
   articleExpandButton.textContent = "expand";
   // step two
 
-  articleExpandButton.addEventListener("click", (event) =>
+  articleExpandButton.addEventListener("click", () =>
     article.classList.toggle("article-open")
   );
 

@@ -93,7 +93,8 @@ const data = [
     date: "July 8th, 2020",
     firstParagraph: "The stock has been increasing rapidly",
     secondParagraph: "Elon Musk is worth billions",
-    thirdParagraph: "Tesla will soon be joining Amazon",
+    thirdParagraph:
+      "Tesla will soon be joining Amazon with Trillion dollor company",
   },
 ];
 
